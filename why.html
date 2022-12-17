@@ -16,17 +16,14 @@
 
 
 
-  
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- bootstrap core css -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- progress barstle -->
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
   <!-- font wesome stylesheet -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -37,115 +34,117 @@
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+/* 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: flex;
+  min-height: 100vh;
+} */
 
-  <style>
-    .accordion_one .panel-group {
-    
-    border: 1px solid #f1f1f1;
-    margin-top:100px;
-    
-    
+.section-two .container {
+  margin: 0 auto;
+  padding: 4rem;
+  /* width: 48rem; */
 }
 
-a:link {
-    text-decoration: none
+.section-two .accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
 }
-
-.accordion_one .panel {
-    background-color: transparent;
-    box-shadow: none;
-    border-bottom: 0px solid transparent;
-    border-radius: 0;
-    margin: 0;
+.section-two .accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #03b5d2;
 }
-
-.accordion_one .panel-default {
-    border: 0;
+.section-two .accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
 }
-
-.accordion-wrap .panel-heading {
-    padding: 0px;
-    border-radius: 0px;
+.section-two .accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
 }
-
-h4 {
-    font-size: 18px;
-    line-height: 24px;
+.section-two .accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
 }
-
-.accordion_one .panel .panel-heading a.collapsed {
-    color: #999999;
-    display: block;
-    padding: 12px 30px;
-    border-top: 0px;
+.section-two .accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
 }
-
-.accordion_one .panel .panel-heading a {
-    display: block;
-    padding: 12px 30px;
-    background: #fff;
-    color: #313131;
-    border-bottom: 1px solid #f1f1f1;
+.section-two .accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
 }
-
-.accordion-wrap .panel .panel-heading a {
-    font-size: 14px;
+.section-two .accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
 }
-
-.accordion_one .panel-group .panel-heading+.panel-collapse>.panel-body {
-    border-top: 0;
-    padding-top: 0;
-    padding: 25px 30px 30px 35px;
-    background: #fff;
-    color: #999999;
+.section-two .accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
 }
-
-.img-accordion {
-    width: 81px;
-    float: left;
-    margin-right: 15px;
-    display: block;
+.section-two .accordion button[aria-expanded=true] {
+  color: #03b5d2;
 }
-
-.accordion_one .panel .panel-heading a.collapsed:after {
-    content: "\2b";
-    color: #999999;
-    background: #f1f1f1;
+.section-two .accordion button[aria-expanded=true] .icon::after {
+  width: 0;
 }
-
-.accordion_one .panel .panel-heading a:after, .accordion_one .panel .panel-heading a.collapsed:after {
-    font-family: 'FontAwesome';
-    font-size: 15px;
-    width: 36px;
-   
-    line-height: 48px;
-    text-align: center;
-    background: #F1F1F1;
-    float: left;
-    margin-left: -31px;
-    margin-top: -12px;
-    margin-right: 15px;
+.section-two .accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 16em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
 }
-.accordion_one .panel .panel-heading a:after {
-    content: "\2212";
+.section-two .accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
 }
-
-.accordion_one .panel .panel-heading a:after, .accordion_one .panel .panel-heading a.collapsed:after {
-    font-family: 'FontAwesome';
-    font-size: 15px;
-    width: 36px;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-    background: #F1F1F1;
-    float: left;
-    margin-left: -31px;
-    margin-top: -12px;
-    margin-right: 15px;
+.section-two .accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
 }
-
-
-  </style>
+</style>
 </head>
 
 <body class="sub_page">
@@ -208,12 +207,10 @@ h4 {
           <div class="col-md-6">
             <div class="why_detail-box">
               <h3>
-                Why learn on Fanadesh
+                Why learn on Kids Kalyanam
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Kids Kalyanam help to prepare children with a strong foundation for life. Kids Kalyanam Daycare and Play School deliver the High Scope Curriculum that empowers and enables children to develop comprehensively, including Physical, Emotional, Intellectual and Social Development. The curriculum is designed to sharpen their language skills in writing, reading, speaking as well as thinking in a safe, secure fun and play environment.
               </p>
               <div class="">
                 <a href="" class="call_to-btn btn_white-border">
@@ -226,84 +223,90 @@ h4 {
       </div>
     </section>
 
-<section>
-  <div class="col-sm-6 accordion_one">
-    <div class="panel-group" id="accordionFourLeft">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-      <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftone" aria-expanded="false" class="collapsed">
-        Why Font Awesome used
-      </a>
-    </h4>
-            </div>
-            <div id="collapseFiveLeftone" class="panel-collapse collapse" aria-expanded="false" role="tablist" style="height: 0px;">
-                <div class="panel-body">
-                    <div class="img-accordion">
-                        <img src="https://img.icons8.com/color/81/000000/person-female.png" alt="">
-                    </div>
-                    <div class="text-accordion">
-                        <p>
-                            Why Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome used
-                        </p>
-                    </div>
-                </div>
-                <!-- end of panel-body -->
-            </div>
+<section class="section-two">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How KIDS KALYANAM is Important?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>KIDS KALYANAM is important as it is the preparation to go to school and engage in formal education. It helps children in preparing for the school better, e.g. following a common routine, communicating in a group, paying attention for a longer span, eating on their own, making friends, looking after their bodily needs, etc.
+            <br/>
+            They are introduced to basic concepts such as counting, alphabets, colors, body parts, festivals, self introduction etc.
+          </p>
         </div>
-        <!-- /.panel-default -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftTwo" aria-expanded="false">
-        Why Font Awesome used and  its benefits
-      </a>
-    </h4>
-            </div>
-            <div id="collapseFiveLeftTwo" class="panel-collapse collapse" aria-expanded="false" role="tablist" style="height: 0px;">
-                <div class="panel-body">
-                    <div class="img-accordion">
-                        <img src="https://img.icons8.com/color/81/000000/person-female.png" alt="">
-                    </div>
-                    <div class="text-accordion">
-                        <p>
-                            Why Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome usedWhy Font Awesome used
-                        </p>
-                    </div>
-                </div>
-                <!-- end of panel-body -->
-            </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How is the play group Important for a Child?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>This is a crucial time to develop their social skills along with their physical, emotional and intellectual development by engaging them in group activities that stimulate learning through all senses and whole body.
+          </p>
         </div>
-        <!-- /.panel-default -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftThree" aria-expanded="false">
-        Why Font Awesome used for its own 
-      </a>
-    </h4>
-            </div>
-            <div id="collapseFiveLeftThree" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                <div class="panel-body">
-                    <div class="img-accordion">
-                        <img src="https://img.icons8.com/color/81/000000/person-female.png" alt="">
-                    </div>
-                    <div class="text-accordion">
-                        <p>
-                             Why Font Awesome used for its own Why Font Awesome used for its own Why Font Awesome used for its own Why Font Awesome used for its own Why Font Awesome used for its own Why Font Awesome used for its own Why Font Awesome used for its own
-                        </p>
-                    </div>
-                </div>
-                <!-- end of panel-body -->
-            </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will my baby have to change his/her routine before commencing Day &nbsp; Care ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>No, absolutely not. KIDS KALYANAM, will adapt to your baby’s routine. If your baby likes to sleep three times a day, we will facilitate this.
+            <br/>
+            We will have a conversation with you before the baby joins our Day care and become familiar with the baby’s routine.
+            </p>
         </div>
-        <!-- /.panel-default -->
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Does my child need to be toilet trained before starting at the KIDS KALYANAM Day Care?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>No, we do not set a specific age or time for your child to be toilet trained. Your child should only start toilet training when he/she is ready and shows a keen interest. Our staff is fully trained to support your child when he/she is ready and trains them for all their basic needs.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What is the checklist to be followed at the KIDS KALYANAM Day Care ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>The arrival checklist is as follows:-
+            <ul>
+              <li>Diapers, Wet wipes, Rash Cream</li>
+              <li>3 Pairs of Clothes & Under Garments</li>
+              <li>2 Milk Bottles, Formula Milk</li>
+              <li>Sipper, Moisturizer, Towel</li>
+              <li>All supplies in a Named Bag</li>
+              <li>Please have child ready & be there for pickup & drop off on-time.</li>
+              
+            </ul>            
+            
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Do the children at KIDS KALYANAM Day Care have their own beds?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>We won't force the child to go to sleep, we will take the child with us into the sleep room and keep him/her on our laps until she/he is ready to go to sleep. Sometimes, this can take a few days before the child feels comfortable enough to sleep. It is ensured that each child is provided with his/her own bed. The beds are cleaned regularly so that hygiene standards of the school are maintained.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Does True Feet Day Care have a structured routine?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Yes, KIDS KALYANAM Day Care have a routine that is followed on a daily basis. In our school, the staff is flexible, letting babies follow their own natural rhythms.
+            <br/>
+            As children become older, the school follow routines at certain times of the day and at other time.
+            </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        </div>
+      </div>
     </div>
-    <!--end of /.panel-group-->
-</div>
-</section>
-
-    <!-- end why section -->
+  </div>
+</section>    <!-- end why section -->
 
   </div>
 
@@ -407,13 +410,25 @@ h4 {
   </section>
   <!-- footer section -->
 
-  <!-- <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> -->
-  <!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+<script>
+  const items = document.querySelectorAll(".accordion button");
 
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
 
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
 
 </body>
 
