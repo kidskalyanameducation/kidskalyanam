@@ -272,7 +272,7 @@ a:focus {
 /* why section */
 
 .why_section {
-  text-align: right;
+  /* text-align: right; */
 }
 
 .why_section a {
