@@ -1,56 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/gallery.css">
-</head>
-<body>
-    <div class="intro">
-        <h1>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>Highway - Free CSS Template</title>
+<!-- 
 
-            Our gallery
-        </h1>
+Highway Template
+
+https://templatemo.com/tm-520-highway
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="scss/bootstrap.min.css">
+        <link rel="stylesheet" href="scss/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="scss/fontAwesome.css">
+        <link rel="stylesheet" href="scss/light-box.css">
+        <link rel="stylesheet" href="scss/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+        <img src="./images/logo.png" alt="">
+            <!-- <a href="index.html">High<em>way</em></a> -->
+        </div>
+        
+    </nav>
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+              <h1>Welcome to <em>KIDS KALYANAM</em></h1>
+           
+                <div class="scroll-icon">
+                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="./images/gallary/scroll-icon.png" alt=""></a>
+                </div>    
+            </div>
+        </div>
+        <video autoplay="" loop="" muted>
+        	<source src="highway-loop.mp4" type="video/mp4" />
+        </video>
     </div>
-    <div class="container">
-        <div class="top">
-            <ul>
-                <li><a href="#img_1"><img src="https://farm8.staticflickr.com/7564/16097104758_e60521f7fa_b.jpg"></a></li>
-                <li><a href="#img_2"><img src="https://picjumbo.imgix.net/HNCK4011.jpg?q=40&w=1650&sharp=30"></a></li>
-                <li><a href="#img_3"><img src="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=46a85a1451e47aea5152ade8299f2894"></a></li>
-                <li><a href="#img_4"><img src="https://picjumbo.imgix.net/HNCK3991.jpg?q=40&w=1650&sharp=30"></a></li>
-                <li><a href="#img_5"><img src="https://image.freepik.com/free-photo/sunlight-in-the-forest_1004-9.jpg"></a></li>
-                <li><a href="#img_6"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-                <li><a href="#img_7"><img src="https://image.freepik.com/free-photo/shiny-lights_385-19321244.jpg"></a></li>
-                <li><a href="#img_8"><img src="https://image.freepik.com/free-photo/skyscraper-with-clouds-reflection_23-10.jpg"></a></li>
-                <li><a href="#img_9"><img src="https://image.freepik.com/free-photo/foggy-pine-forest_426-19323742.jpg"></a></li>
-                <li><a href="#img_10"><img src="https://image.freepik.com/free-photo/working-from-bed_385-19324222.jpg"></a></li>
-                <li><a href="#img_11"><img src="https://image.freepik.com/free-photo/a-sky-full-of-stars_426-19320899.jpg"></a></li>
-                <li><a href="#img_12"><img src="https://image.freepik.com/free-photo/city-in-bokeh_426-19322711.jpg"></a></li>
-                <li><a href="#img_13"><img src="https://image.freepik.com/free-photo/desert-and-the-road_426-19314945.jpg"></a></li>
-                <li><a href="#img_14"><img src="https://image.freepik.com/free-photo/sunlight-through-the-grass_385-19321333.jpg"></a></li>
-                <li><a href="#img_15"><img src="https://image.freepik.com/free-photo/colorful-springtime_385-19321241.jpg"></a></li>
-                <li><a href="#img_16"><img src="https://image.freepik.com/free-photo/from-blue-to-brown_426-19320820.jpg"></a></li>
-            </ul>
-            <a href="#_1" class="lightbox trans" id="img_1"><img src="https://farm8.staticflickr.com/7564/16097104758_e60521f7fa_b.jpg"></a>
-            <a href="#_2" class="lightbox trans" id="img_2"><img src="https://picjumbo.imgix.net/HNCK4011.jpg?q=40&w=1650&sharp=30"></a>
-            <a href="#_3" class="lightbox trans" id="img_3"><img src="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=46a85a1451e47aea5152ade8299f2894"></a>
-            <a href="#_4" class="lightbox trans" id="img_4"><img src="https://picjumbo.imgix.net/HNCK3991.jpg?q=40&w=1650&sharp=30"></a>
-            <a href="#_5" class="lightbox trans" id="img_5"><img src="https://image.freepik.com/free-photo/sunlight-in-the-forest_1004-9.jpg"></a>
-            <a href="#_6" class="lightbox trans" id="img_6"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a>
-            <a href="#_7" class="lightbox trans" id="img_7"><img src="https://image.freepik.com/free-photo/shiny-lights_385-19321244.jpg"></a>
-            <a href="#_8" class="lightbox trans" id="img_8"><img src="https://image.freepik.com/free-photo/skyscraper-with-clouds-reflection_23-10.jpg"></a>
-            <a href="#_9" class="lightbox trans" id="img_9"><img src="https://image.freepik.com/free-photo/foggy-pine-forest_426-19323742.jpg"></a>
-            <a href="#_10" class="lightbox trans" id="img_10"><img src="https://image.freepik.com/free-photo/working-from-bed_385-19324222.jpg"></a>
-            <a href="#_11" class="lightbox trans" id="img_11"><img src="https://image.freepik.com/free-photo/a-sky-full-of-stars_426-19320899.jpg"></a>
-            <a href="#_12" class="lightbox trans" id="img_12"><img src="https://image.freepik.com/free-photo/city-in-bokeh_426-19322711.jpg"></a>
-            <a href="#_13" class="lightbox trans" id="img_13"><img src="https://image.freepik.com/free-photo/desert-and-the-road_426-19314945.jpg"></a>
-            <a href="#_14" class="lightbox trans" id="img_14"><img src="https://image.freepik.com/free-photo/sunlight-through-the-grass_385-19321333.jpg"></a>
-            <a href="#_15" class="lightbox trans" id="img_15"><img src="https://image.freepik.com/free-photo/colorful-springtime_385-19321241.jpg"></a>
-            <a href="#_16" class="lightbox trans" id="img_16"><img src="https://image.freepik.com/free-photo/from-blue-to-brown_426-19320820.jpg"></a>
+
+
+    <div class="full-screen-portfolio" id="portfolio">
+        <div class="container-fluid">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_4.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>Biodiesel <em>squid</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_4.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_2.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>raclette <em>taxidermy</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_2.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_3.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>humblebrag <em>brunch</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_3.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_1.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>Succulents <em>chambray</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_1.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_5.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>freegan <em>aesthetic</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_5.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_6.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>taiyaki <em>vegan</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_6.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_7.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>Thundercats <em>santo</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_7.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="./images/gallary/big_portfolio_item_8.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>wayfarers <em>yuccie</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_8.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+            	<div class="portfolio-item">
+                	<a href="./images/gallary/big_portfolio_item_9.png" data-lightbox="image-1"><div class="thumb">
+                        <div class="hover-effect">
+                            <div class="hover-content">
+                                <h1>disrupt <em>street</em></h1>
+                                <p>Awesome Subtittle Goes Here</p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/gallary/portfolio_item_9.png">
+                        </div>
+                    </div></a>
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    
 </body>
 </html>
