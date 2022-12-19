@@ -3,6 +3,10 @@ body {
   background-color: #fefeff;
 }
 
+.logo{
+  width: 190px;
+  border-radius: 5px;
+}
 .layout_padding {
   padding: 75px 0;
 }
@@ -64,6 +68,7 @@ body {
 .header_section {
   padding-top: 10px;
   font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }
 
@@ -135,10 +140,10 @@ a:focus {
 }
 
 
-.navbar-brand img {
+/* .navbar-brand img {
   width: 25px;
   margin-right: 7px;
-}
+} */
 
 
 .custom_nav-container .nav_search-btn {
