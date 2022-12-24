@@ -31,6 +31,224 @@
 
 
 
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* 
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hind", sans-serif;
+    background: #fff;
+    color: #4d5974;
+    display: flex;
+    min-height: 100vh;
+  } */
+
+    .section-two .container {
+      margin: 0 auto;
+      padding: 4rem;
+      /* width: 48rem; */
+    }
+
+    .section-two .accordion .accordion-item {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .section-two .accordion .accordion-item button[aria-expanded=true] {
+      border-bottom: 1px solid #03b5d2;
+    }
+
+    .section-two .accordion button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: #7288a2;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    .section-two .accordion button:hover,
+    .accordion button:focus {
+      cursor: pointer;
+      color: #03b5d2;
+    }
+
+    .section-two .accordion button:hover::after,
+    .accordion button:focus::after {
+      cursor: pointer;
+      color: #03b5d2;
+      border: 1px solid #03b5d2;
+    }
+
+    .section-two .accordion button .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+
+    .section-two .accordion button .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+    }
+
+    .section-two .accordion button .icon::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .section-two .accordion button .icon::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: currentColor;
+    }
+
+    .section-two .accordion button[aria-expanded=true] {
+      color: #03b5d2;
+    }
+
+    .section-two .accordion button[aria-expanded=true] .icon::after {
+      width: 0;
+    }
+
+    .section-two .accordion button[aria-expanded=true]+.accordion-content {
+      opacity: 1;
+      max-height: 16em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+
+    .section-two .accordion .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+    }
+
+    .section-two .accordion .accordion-content p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+
+    /* //////////////////////// */
+    .card {
+      height: 250px;
+      width: 300px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:before {
+      position: absolute;
+      content: '';
+      height: 600px;
+      width: 600px;
+      background: linear-gradient(180deg, #f4af18 30%, #15d2c3 70%);
+      transform: rotate(90deg);
+      animation: 3s linear 0s infinite rotate;
+      backdrop-filter: 10px;
+    }
+
+    .card:after {
+      width: 280px;
+      height: 230px;
+      position: absolute;
+      content: '';
+      backdrop-filter: blur(5px);
+      background: #efefef8a;
+
+    }
+
+    .card .card-inner {
+      width: 280px;
+      height: 230px;
+
+      /* display: grid;
+  align-items: center;
+  justify-content: center; */
+      position: relative;
+      z-index: 10;
+    }
+
+    .card .card-inner h1 {
+      font-size: 24px;
+      /* text-transform: uppercase; */
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    * p {
+      margin: 0;
+    }
+
+    .popup {
+      text-transform: uppercase;
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      z-index: 99999999999;
+      animation: zoom-in-zoom-out 1.5s ease infinite;
+    }
+
+    .popupimage {
+      width: 100%;
+    }
+
+    .popuin {}
+
+    .popuin>h4 {
+  
+
+    }
+  </style>
 
 
 </head>
@@ -42,7 +260,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-           <img class="logo" src="./images/logo.png" alt="">
+            <img class="logo" src="./images/logo.png" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +276,7 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="about.html"> About </a>
                 </li>
-                
+
                 <li class="nav-item ">
                   <a class="nav-link" href="gallery.html"> Gallery </a>
                 </li>
@@ -128,12 +346,14 @@
                 About our School
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Our Playschool helps in building a strong foundation in social, pre-academics, and general life skills.
+                It helps in the development of a child’s emotional and personal growth and provides opportunities for
+                children to learn in ways that interests them and develop a strong sense of curiosity. Consequently, it
+                helps in building a positive association with inquisitive learning in the form of fun activities and
+                guided play.
               </p>
               <div class="">
-                <a href="" class="call_to-btn btn_white-border">
+                <a href="/about.html" class="call_to-btn btn_white-border">
                   Read More
                 </a>
               </div>
@@ -147,7 +367,7 @@
     <!-- end about section -->
 
     <!-- admission section -->
-    <section class="admission_section">
+    <!-- <section class="admission_section">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -174,11 +394,59 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
 
     <!-- end admission section -->
+
+
+    <!-- determine section -->
+    <section class="determine_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="determine_detail-box">
+              <h3>
+                Datermine the right for you
+              </h3>
+              <p style="margin: 0;padding: 0;">
+                <b> <em> HOW WE PREPARE YOUR CHILD FOR THE FIRST DAY OF SCHOOL ? </em></b>
+              <p>
+                We are preparing your child habitual of the routine. The child also becomes aware of himself/herself and
+                develops motor and cognitive skills. Our schools further enable the child to receive individual
+                attention as we have very low student-to-teacher ratio. The kids are given the ‘right’ toys to play with
+                according to their age of development which helps them to develop and learn the things that can be
+                implemented or transferred onto them
+              <ul>
+                <li>Reduces separation anxiety</li>
+                <li>Increases growth</li>
+                <li>Social development</li>
+                <li>Building language skills</li>
+                <li>Building motor skills</li>
+                <li>Building congnitive skills</li>
+                <li>Independent choice</li>
+              </ul>
+              </p>
+              </p>
+              <!-- <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  Read More
+                </a>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="determine_img-container">
+              <img src="images/determine.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end determine section -->
 
     <!-- why section -->
     <section class="why_section">
@@ -195,9 +463,11 @@
                 Why learn on KIDS KALYANAM
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Kids Kalyanam help to prepare children with a strong foundation for life. Kids Kalyanam Daycare and Play
+                School deliver the High Scope Curriculum that empowers and enables children to develop comprehensively,
+                including Physical, Emotional, Intellectual and Social Development. The curriculum is designed to
+                sharpen their language skills in writing, reading, speaking as well as thinking in a safe, secure fun
+                and play environment.
               </p>
               <div class="">
                 <a href="" class="call_to-btn btn_white-border">
@@ -213,205 +483,288 @@
 
     <!-- end why section -->
 
-    <!-- determine section -->
-    <section class="determine_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="determine_detail-box">
-              <h3>
-                Datermine the right for you
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              </p>
-              <div class="">
-                <a href="" class="call_to-btn btn_white-border">
-                  Read More
-                </a>
-              </div>
-            </div>
+  </div>
+
+  <section class="section-two">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How KIDS KALYANAM is
+              Important?</span><span class="icon" aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>KIDS KALYANAM is important as it is the preparation to go to school and engage in formal education. It
+              helps children in preparing for the school better, e.g. following a common routine, communicating in a
+              group, paying attention for a longer span, eating on their own, making friends, looking after their bodily
+              needs, etc.
+              <br />
+              They are introduced to basic concepts such as counting, alphabets, colors, body parts, festivals, self
+              introduction etc.
+            </p>
           </div>
-          <div class="col-md-6">
-            <div class="determine_img-container">
-              <img src="images/determine.png" alt="">
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How is the play group
+              Important for a Child?</span><span class="icon" aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>This is a crucial time to develop their social skills along with their physical, emotional and
+              intellectual development by engaging them in group activities that stimulate learning through all senses
+              and whole body.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will my baby have to
+              change his/her routine before commencing Day Care ?</span><span class="icon"
+              aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>No, absolutely not. KIDS KALYANAM, will adapt to your baby’s routine. If your baby likes to sleep three
+              times a day, we will facilitate this.
+              <br />
+              We will have a conversation with you before the baby joins our Day care and become familiar with the
+              baby’s routine.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Does my child need to be
+              toilet trained before starting at the KIDS KALYANAM Day Care?</span><span class="icon"
+              aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>No, we do not set a specific age or time for your child to be toilet trained. Your child should only
+              start toilet training when he/she is ready and shows a keen interest. Our staff is fully trained to
+              support your child when he/she is ready and trains them for all their basic needs.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What is the checklist to
+              be followed at the KIDS KALYANAM Day Care ?</span><span class="icon" aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>The arrival checklist is as follows:-
+            <ul>
+              <li>Diapers, Wet wipes, Rash Cream</li>
+              <li>3 Pairs of Clothes & Under Garments</li>
+              <li>2 Milk Bottles, Formula Milk</li>
+              <li>Sipper, Moisturizer, Towel</li>
+              <li>All supplies in a Named Bag</li>
+              <li>Please have child ready & be there for pickup & drop off on-time.</li>
+
+            </ul>
+
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Do the children at KIDS
+              KALYANAM Day Care have their own beds?</span><span class="icon" aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>We won't force the child to go to sleep, we will take the child with us into the sleep room and keep
+              him/her on our laps until she/he is ready to go to sleep. Sometimes, this can take a few days before the
+              child feels comfortable enough to sleep. It is ensured that each child is provided with his/her own bed.
+              The beds are cleaned regularly so that hygiene standards of the school are maintained.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Does True Feet Day Care
+              have a structured routine?</span><span class="icon" aria-hidden="true"></span></button>
+          <div class="accordion-content">
+            <p>Yes, KIDS KALYANAM Day Care have a routine that is followed on a daily basis. In our school, the staff is
+              flexible, letting babies follow their own natural rhythms.
+              <br />
+              As children become older, the school follow routines at certain times of the day and at other time.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-
-
-    <!-- end determine section -->
-
-  </div>
-
+    </div>
+  </section> <!-- end why section -->
+  1
 
   <!-- client section -->
-  <section class="client_section layout_padding">
+  <!-- <section class="client_section layout_padding">
     <h2 class="">
       Testimonial
     </h2>
     <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="images/client.png" alt="">
+                </div>
               </div>
-              <div class="carousel-item">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Alex Du
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-     
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="images/client.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Alex Du
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="images/client.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Alex Du
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </section> -->
 
 
   <!-- end client section -->
 
-
-
-
-      <!-- end contact section -->
-      <section class="info_section layout_padding-top">
-        <div class="info_logo-box">
-          <h2>
-              KIDS KALYANAM
-          </h2>
+  <!-- end contact section -->
+  <section class="info_section layout_padding-top">
+    <div class="info_logo-box">
+      <h2>
+        KIDS KALYANAM
+      </h2>
+    </div>
+    <div class="container layout_padding2">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>
+            About Us
+          </h5>
+          <p>
+            dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
+          </p>
         </div>
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-4">
-                <h5>
-                    About Us                                                                             
-                </h5>
-               <p>
-                  dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r 
-               </p>
-              </div>
-              <div class="col-md-4" style="text-align: center;">
-                <h5>
-                    Useful Link 
-                </h5>
-                <ul>
-                  <li>
-                    <a href="">
-                        About
-                    </a>
-                  </li>
-                  <li>
-                   <a href="">
-                      Why Us
-                   </a>
-                  </li>
-                  <li>
-                    <a href="">
-                        Curriculum
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-4">
-                <h5>
-                    Contact Us
-                </h5>
-                <p>
-                    dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e 
-                </p>
-              </div>
-              <div class="col-md-3">
-           
-                
-              </div>
-            </div>
-          </div>
-          <div class="container">
-              <div class="social_container">
-                 
-                  <div class="social-box">
-                    <a href="">
-                      <img src="images/fb.png" alt="">
-                    </a>
-      
-                    <a href="">
-                      <img src="images/twitter.png" alt="">
-                    </a>
-                    <a href="">
-                      <img src="images/linkedin.png" alt="">
-                    </a>
-                    <a href="">
-                      <img src="images/instagram.png" alt="">
-                    </a>
-                  </div>
-                </div>
-          </div>
-        </section>
+        <div class="col-md-4" style="text-align: center;">
+          <h5>
+            Useful Link
+          </h5>
+          <ul>
+            <li>
+              <a href="">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Why Us
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Curriculum
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>
+            Contact Us
+          </h5>
+          <p>
+            dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e
+          </p>
+        </div>
+        <div class="col-md-3">
 
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="social_container">
+
+        <div class="social-box">
+          <a href="">
+            <img src="images/fb.png" alt="">
+          </a>
+
+          <a href="">
+            <img src="images/twitter.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/linkedin.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/instagram.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 
+  <div class="popup">
+
+  </div> -->
+
+  <div class="card popup">
+    <div class="card-inner">
+      <img class="popupimage" src="./images/logo.png" alt="">
+      <p class="popuin">
+      <h4 style="text-align: center;    color: red;
+      font-weight: 900;" >addmitions are open </h4>
+      <h5 style="text-align: center;    color: blue;
+      font-weight: 900;" >no regestration fee</h5>
+      <h6 style="text-align: center;    color: green;
+      font-weight: 900;" >for first group enrolements</h6>
+      </p>
+    </div>
+  </div>
   <!-- footer section -->
 
   <!-- footer section -->
@@ -419,7 +772,37 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
- 
+  <script>
+    const items = document.querySelectorAll(".accordion button");
+
+    function toggleAccordion() {
+      const itemToggle = this.getAttribute('aria-expanded');
+
+      for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+      }
+
+      if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
+  
+  
+  const popup = document.querySelector(".popup")
+  setInterval(function () {
+    // if (popup.style.display==="none"){
+    //   popup.style.display = "grid"
+    // }else{
+
+      popup.style.display = "none"
+    // }
+  }, 5000);
+
+  console.log(popup);
+  </script>
+
 </body>
 
 </html>
