@@ -1,6 +1,7 @@
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #fefeff;
+  scroll-behavior: smooth;
 }
 
 .logo{

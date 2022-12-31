@@ -2,7 +2,10 @@
 
 @media (max-width: 992px) {
 
-
+    .herologoimg{
+        margin-left: 0px;
+      transform: rotate(0deg);
+      }
     .hero-container {
         flex-direction: column;
     }
@@ -30,6 +33,10 @@
 
 @media (max-width: 768px) {
 
+    .herologoimg{
+        margin-left: 0px;
+      transform: rotate(0deg);
+      }
 
     .hero_detail-box {
         text-align: center;
@@ -60,6 +67,11 @@
 }
 
 @media (max-width: 576px) {
+    .herologoimg{
+        margin-left: 0px;
+      transform: rotate(0deg);
+      }
+      
     .hero-container {
         padding-bottom: 100px;
     }
