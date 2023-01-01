@@ -4,91 +4,395 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GALLERY | KIDS KALYANAM</title>
-    <link rel="stylesheet" href="./css/newres.css">
+    <link rel="stylesheet" href="./css/g.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- progress barstle -->
+    <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <title>Document</title>
     <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        
-      }
-      img{
-        width: 60%;
-        border-radius: 10px;
-      }
-      a{
-        background: none;
-        text-decoration: none;
-        padding: 10px;
-        border: 2px solid black;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 0, 0.599);
-        cursor: pointer;
-        text-transform: uppercase;
-        transition: background-color 1s;
-    }
-    a:hover{
-          background-color: rgba(255, 255, 0, 0.862);
+      button{
 
+        outline: none;
+        border: none !important;
       }
-      .bgimg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("./subbg2.jpg");
-        width: 100vw;
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
-        color: rgb(81, 81, 81);
-        font-family: "Courier New", Courier, monospace;
-        font-size: 25px;
+        .top_container::after{
+            width: 0px;
+            height: 0px;
+        }
+        .main{
+            padding: 45px 0px 90px 0px;
+        }
+      .splide {
+        padding: 20px 0;
       }
 
-      .topleft {
-        position: absolute;
+      .splide__slide img {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 400ms;
+        transform: scale(0.9);
+        transform-origin: center center;
+      }
+
+      .splide__slide.is-active img {
+        transform: scale(1);
+      }
+
+      .splide .splide__arrow {
         top: 0;
-        left: 16px;
-      }
-
-      .bottomleft {
-        position: absolute;
         bottom: 0;
-        left: 16px;
+        height: 100%;
+        transform: none;
+        border-radius: unset;
+        width: 50px;
+        opacity: 0.9;
+      }
+      .splide .splide__arrow svg {
+        filter: invert(1);
+        width: 24px;
+        height: 24px;
       }
 
-      .middle {
-        max-width: 100vw;
-        padding: 70px;
-        border-radius: 10px;
-        backdrop-filter: blur(3px);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      .splide__arrow.splide__arrow--prev {
+        left: 0;
+        background: linear-gradient(
+          90deg,
+        
+          rgba(236, 196, 20, 0.7) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .splide__arrow.splide__arrow--next {
+        right: 0;
+        background: linear-gradient(
+          270deg,
+          rgba(236, 196, 20, 0.7) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      a {
+        color: #fff;
+        padding: 4px 8px;
+      }
+
+      .left {
+        text-align: left;
+      }
+      .mid{
+        /* border: 2px solid red; */
+      }
+      .midheading{
         text-align: center;
       }
+      .midcontaner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+     
+      }
+      .miditem {
+        width: 350px;
+        height: 250px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 1s;
+        cursor: pointer;
+      }
+      .miditem > img {
+        width: 100%;
+        /* height: 100%; */
+        border-radius: 10px;
+      }
+      .miditemdes {
+        padding: 10px;
+        border-radius: 10px 20px;
+        position: absolute;
+        bottom: 0;
+        color: rgb(255, 255, 255);
+        width: 100%;
+      background: linear-gradient( 360deg, rgb(0 0 0 / 70%) 24%, rgba(255, 255, 255, 0) 100% );
 
-      hr {
-        margin: auto;
-        width: 40%;
+      }
+      .miditem:hover{
+        transform: scale(1.1);
       }
     </style>
   </head>
   <body>
-    <div class="bgimg">
-      <!-- <div class="topleft">
-        
-      </div> -->
-      <div class="middle">
-        <img src="./images/logo.png" alt="">
-        <h1>COMING SOON</h1>
-        <p>It takes time to create great things.</p>
-        <hr />
-        <p>2 days left</p>
-        <a href="./index.html">Click hare to go back</a>
+    <div class="top_container ">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="index.html">
+                <img class="logo" src="./images/logo.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav  ">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="about.html"> About </a>
+                    </li>
+    
+                    <li class="nav-item ">
+                      <a class="nav-link" href="gallery.html"> Gallery </a>
+                    </li>
+                    <!-- <li class="nav-item ">
+                      <a class="nav-link" href="admission.html"> Admission </a>
+                    </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="curriculum.html">Curriculum</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="why.html"> Why Us </a>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+    
+                  </ul>
+                </div>
+            </nav>
+          </div>
+        </header>
+      
+
+    <div class="main">
+      <div id="splide" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="./images/gallery/img3.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./images/gallery/img7.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./images/gallery/img8.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./images/gallery/img12.jpg" />
+            </li>
+           
+          </ul>
+        </div>
       </div>
-      <!-- <div class="bottomleft">
-        <p></p>
-      </div> -->
     </div>
+
+</div>
+    <div class="mid">
+        <div class="midheading"> 
+            <h1> Our Gallery</h1>
+        </div>
+        <div class="midcontaner">
+            <div class="miditem">
+                <img src="./images/gallery/img1.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img2.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img3.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img4.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img5.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img6.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img7.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img8.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            
+            <div class="miditem">
+                <img src="./images/gallery/img9.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img10.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img11.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+            <div class="miditem">
+                <img src="./images/gallery/img12.jpg" alt="" />
+                <!-- <div class="miditemdes">
+                  <h3>hello</h3>
+                </div> -->
+            </div>
+              
+        </div>
+        <section class="info_section layout_padding-top">
+          <div class="info_logo-box">
+            <h2>
+              KIDS KALYANAM
+            </h2>
+          </div>
+          <div class="container layout_padding2">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>
+                  About Us
+                </h5>
+                <p>
+                  Our Playschool helps in building a strong foundation in social, pre-academics, and general life skills.
+                </p>
+              </div>
+              <div class="col-md-4" style="text-align: center;">
+                <h5>
+                  Useful Link
+                </h5>
+                <ul>
+                  <li>
+                    <a href="/about.html">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/why.html">
+                      Why Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/curriculum.html">
+                      Curriculum
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>
+                  Contact Us
+                </h5>
+                <p>
+                  <div>
+                    Email: kids.kalyanam@gmail.com
+                  </div>
+                  <div>
+                    Phone: +91 98911 50911, +91 70655 20231
+                  </div>
+                  <div>
+                    Address: A7/02, E-1, Vasant Kunj. 110070
+                  </div>
+                </p>
+              </div>
+              <div class="col-md-3">
+      
+      
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="social_container">
+      
+              <div class="social-box">
+                <a href="">
+                  <img src="images/fb.png" alt="">
+                </a>
+      
+                <a href="">
+                  <img src="images/twitter.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/linkedin.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/instagram.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+     
+    </div>
+    <script src="./js/g.js"></script>
+    
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splide", {
+          type: "loop",
+          perPage: 3,
+          focus: "center",
+          autoplay: true,
+          interval: 8000,
+          flickMaxPages: 3,
+          updateOnMove: true,
+          pagination: false,
+          padding: "10%",
+          throttle: 300,
+          breakpoints: {
+            1440: {
+              perPage: 1,
+              padding: "30%",
+            },
+          },
+        }).mount();
+      });
+    </script>
   </body>
 </html>

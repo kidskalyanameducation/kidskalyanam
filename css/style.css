@@ -564,8 +564,37 @@ a:focus {
   color: #fdfdfe;
 }
 
+.whatsapplogcover{
+  animation: zoom-in-zoom-out 2s ease infinite;
+  position: fixed;
+  bottom: 20px;
+  right: 35px;
+}
+.whatsapplog{
+  
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 60px;
+  background-color:green;
+}
+.whatsapplog >p{
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  color: white;
 
-
+}
+.whatsapplog > div {
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 100%;
+  padding: 3px;
+}
+.whatsapplog > div >img{
+  width: 35px;
+}
 /* end footer section*/
 
 
